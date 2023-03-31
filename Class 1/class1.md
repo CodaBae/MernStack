@@ -2,8 +2,7 @@
 
 - Intro to MERN STACK
 
-- Class Guide Docs -> 
-https://docs.google.com/document/d/191sDDxrYP6AZv2rSZIi93jl2tX5JoqdXB4imJMNe35A/edit?usp=sharing
+- Class Guide Docs -> https://docs.google.com/document/d/1uOe-6m0S9Usn7rIxzxKKMq8xGcMqOttZFFcds_QkkbY/edit?usp=sharing 
 
 Welcome to the MERN stack class! In this class, we will be diving deep into the MERN stack, which stands for MongoDB, Express.js, React.js, and Node.js. These technologies have become increasingly popular in recent years, and for good reason. Together, they allow for the development of full-stack web applications using JavaScript, making it a great choice for developers who are comfortable working with this language.
 
