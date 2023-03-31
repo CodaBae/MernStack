@@ -1,7 +1,7 @@
 {
-  "name": "taskbe",
+  "name": "expenseBE",
   "version": "1.0.0",
-  "description": "this is a task app..",
+  "description": "this is a expense app..",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,6 @@
   "author": "shalom",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^6.9.0"
+    "express": "^4.18.2"
   }
 }
