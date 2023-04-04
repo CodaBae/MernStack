@@ -1,40 +1,40 @@
 # CRUD
 - Create, Read, Update and Delete
 
-- Create a new task
-const newTask = new Task({
-  taskName: 'My Task',
-  taskDescription: 'This is my task.',
+- Create a new expense
+const newTask = new Expense({
+  taskName: 'My Expense',
+  taskDescription: 'This is my expense.',
   taskDueDate: new Date()
 });
 newTask.save();
 
-- Read all tasks
-Task.find((err, tasks) => {
+- Read all expenses
+Expense.find((err, expenses) => {
   if (err) return console.error(err);
-  console.log(tasks);
+  console.log(expenses);
 });
 
-- Update a task
-Task.findOneAndUpdate({ taskName: 'My Task' }, { taskDescription: 'Updated task description.' }, (err, task) => {
+- Update a expense
+Expense.findOneAndUpdate({ taskName: 'My Expense' }, { taskDescription: 'Updated expense description.' }, (err, expense) => {
   if (err) return console.error(err);
-  console.log(task);
+  console.log(expense);
 });
 
-- Delete a task
-Task.findOneAndDelete({ taskName: 'My Task' }, (err) => {
+- Delete a expense
+Expense.findOneAndDelete({ taskName: 'My Expense' }, (err) => {
   if (err) return console.error(err);
-  console.log('Task deleted.');
+  console.log('Expense deleted.');
 });
 
 
-# Implement the following routes for the task API:
+# Implement the following routes for the expense API:
 
-a. GET /tasks - to retrieve all tasks
-b. POST /tasks - to create a new task
-c. GET /tasks/:id - to retrieve a specific task by ID
-d. PUT /tasks/:id - to update a task by ID
-e. DELETE /tasks/:id - to delete a task by ID
+a. GET /expenses - to retrieve all expenses
+b. POST /expenses - to create a new expense
+c. GET /expenses/:id - to retrieve a specific expense by ID
+d. PUT /expenses/:id - to update a expense by ID
+e. DELETE /expenses/:id - to delete a expense by ID
 
 
 # Test the API using Postman or a similar tool.
@@ -55,42 +55,42 @@ app.use(bodyParser.json());
 
 # Here is sample code to implement the above steps:
 
-- Get all tasks
-app.get('/tasks', (req, res) => {
-  Task.find()
-    .then(tasks => res.json(tasks))
+- Get all expenses
+app.get('/expenses', (req, res) => {
+  Expense.find()
+    .then(expenses => res.json(expenses))
     .catch(err => res.status(400).json({ success: false }));
 });
 
-- Create a task
-app.post('/tasks', (req, res) => {
-  const newTask = new Task({
+- Create a expense
+app.post('/expenses', (req, res) => {
+  const newTask = new Expense({
     name: req.body.name
   });
 
   newTask
     .save()
-    .then(task => res.json({ task, success: true }))
+    .then(expense => res.json({ expense, success: true }))
     .catch(err => res.status(400).json({ success: false }));
 });
 
-- Get a task by ID
-app.get('/tasks/:id', (req, res) => {
-  Task.findById(req.params.id)
-    .then(task => res.json(task))
+- Get a expense by ID
+app.get('/expenses/:id', (req, res) => {
+  Expense.findById(req.params.id)
+    .then(expense => res.json(expense))
     .catch(err => res.status(400).json({ success: false }));
 });
 
-- Update a task by ID
-app.put('/tasks/:id', (req, res) => {
-  Task.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
-    .then(task => res.json({ task, success: true }))
+- Update a expense by ID
+app.put('/expenses/:id', (req, res) => {
+  Expense.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
+    .then(expense => res.json({ expense, success: true }))
     .catch(err => res.status(400).json({ success: false }));
 });
 
-- Delete a task by ID
-app.delete('/tasks/:id', (req, res) => {
-  Task.findByIdAndDelete(req.params.id)
-    .then(task => res.json({ task, success: true }))
+- Delete a expense by ID
+app.delete('/expenses/:id', (req, res) => {
+  Expense.findByIdAndDelete(req.params.id)
+    .then(expense => res.json({ expense, success: true }))
     .catch(err => res.status(400).json({ success: false }));
 });
