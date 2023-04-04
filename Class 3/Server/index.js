@@ -17,25 +17,68 @@ mongoose.connect(mongoDBAccess, { useNewUrlParser: true }).then(() => {
     console.log(err)
 })
 
-const newExpense = {
-    name: 'transportation',
-    amount: 500,
-    date: 'Apr 1',
-    invoice: 'payment for food'
+// const newExpense = {
+//     name: 'transportation',
+//     amount: 500,
+//     date: 'Apr 1',
+//     invoice: 'payment for food'
+// }
+
+
+// const addExpense = new expenseModel(newExpense)
+// addExpense.save()
+
+app.get('/',(reqest, responds) => {
+    responds.send('hello, welcome to expense app')
+})
+
+app.get('/greeting',(reqest, responds) => {
+    responds.send('hello, paul welcomes you to expense app')
+})
+
+
+// # Implement the following routes for the expense API:
+
+// a. GET /expenses - to retrieve all expenses
+
+app.get('/expenses', async (req, res)=>{
+     const data = await expenseModel.find()
+    res.send(data)
+})
+
+// b. POST /expenses - to create a new expense
+
+app.post('/addExpense', async (req,res) =>{
+const newExpense =  {
+    name: 'ice-cream',
+    amount: 200,
+    date: 'Apr 5',
+    invoice: 'payment for ice-cream'
 }
 
+let addExpense = new expenseModel(newExpense)
+let data = await addExpense.save()
 
-const addExpense = new expenseModel(newExpense)
+ res.send(data)
 
-addExpense.save()
+})
 
 
-const port = 7000
+
+
+// c. GET /expenses/:id - to retrieve a specific expense by ID
+
+
+// d. PUT /expenses/:id - to update a expense by ID
+
+
+// e. DELETE /expenses/:id - to delete a expense by ID
+
+
+
+const port = 5000
 
 app.listen(port, ()=>{
     console.log('hello, you are listening to port ' + port)
 })
 
-app.get('/', (req, res) =>{
-    res.send('hello wellcome to expense server')
-})
