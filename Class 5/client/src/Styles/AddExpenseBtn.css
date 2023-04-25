@@ -1,0 +1,22 @@
+#Add_btn_div{
+    width: 75px;
+    height: 75px;
+    background: #438883;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 40px;
+
+}
+
+#Add_btn_div img{
+    width: 40%;
+
+}
+
+#Add_btn_con{
+    display: flex;
+    justify-content: center;
+}

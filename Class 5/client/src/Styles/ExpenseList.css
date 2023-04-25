@@ -1,0 +1,119 @@
+#Expense_list_header{
+
+    margin: 10% 2% 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Expense_list_header > h3 {
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+text-transform: capitalize;
+
+color: #222222;
+
+
+}
+
+#Expense_list_header > p {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+
+/* Secondary */
+
+color: #666666;
+
+}
+
+#Expense_list_div{
+    height: 45vh;
+    overflow: auto;
+}
+
+#Expense_task_div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+
+}
+
+#Expense_task_div > div{
+    display: flex;
+}
+
+#Expense_task_div  h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    color: #000000;
+    white-space: nowrap;
+
+    
+}
+
+#Expense_task_div p{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+text-transform: capitalize;
+white-space: nowrap;
+
+
+/* Secondary */
+
+color: #666666;
+}
+
+#Expense_task_div h1{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+text-align: right;
+letter-spacing: -0.04em;
+text-transform: capitalize;
+
+color: #25A969;
+}
+
+#Expense_task_name{
+
+    margin-left: 10%;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#Expense_task_price{
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    align-items: center;
+}
