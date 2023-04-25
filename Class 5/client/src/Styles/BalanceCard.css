@@ -1,0 +1,67 @@
+#balance_card_container{
+    height: 140px;
+    background: #2F7E79;
+    border-radius: 20px;
+    width: 90%;
+    padding: 8% 5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+#total_bal_text{
+    width: 101px;
+height: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.02em;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+#balance_text{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 36px;
+letter-spacing: -0.05em;
+
+color: #FFFFFF;
+
+}
+
+.income_expense_tag{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+letter-spacing: -0.05em;
+
+color: #D0E6E4;
+}
+
+.income_expense_amount{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -0.05em;
+
+color: #FFFFFF;
+}
